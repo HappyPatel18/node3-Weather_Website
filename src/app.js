@@ -4,6 +4,9 @@ const hbs= require('hbs');
 
 
 const app = express();
+
+const port = process.env.PORT || 3000;
+
 //Define path for express config
 const publicDirectoryPath = path.join(__dirname, "../public/");
 //initially we have to name the folder view but we can customize using following code
@@ -83,7 +86,6 @@ app.get("/help", (req, res) => {
 //     res.json(data)
 // })
 
-const port = 3000;
 
 app.listen(port, () => {
   console.log(`Server is listening at ${port}`);
