@@ -5,7 +5,7 @@ const hbs= require('hbs');
 
 const app = express();
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8000;
 
 //Define path for express config
 const publicDirectoryPath = path.join(__dirname, "../public/");
@@ -77,15 +77,6 @@ app.get("/help", (req, res) => {
     res.send('404: Page Not Found Error ')
   })
 
-// app.get('/json',(req,res)=>{
-//     const data={
-//         id:1,
-//         name:'Iphone 13',
-//         model:'First Model'
-//     }
-//     res.json(data)
-// })
-console.log("")
 
 app.listen(port, () => {
   console.log(`Server is listening at ${port}`);
